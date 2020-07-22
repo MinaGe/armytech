@@ -1,0 +1,57 @@
+﻿@model armytech.Models.Student
+
+@{
+    ViewBag.Title = "Details";
+}
+
+
+    <div class="container">
+        <div class="row justify-content-center">
+            <h2 class="justify-content-center">Student Saved</h2>
+        </div>
+        <div class="row justify-content-center">
+
+
+            <br />
+            <div class="card text-center" style="width: 18rem">
+                <div class="card-body">
+                    <h6 class="card-header">   @Html.DisplayNameFor(model => model.Name)</h6>
+                    <h3 class="card-subtitle mb-2 text-muted">  @Html.DisplayFor(model => model.Name)</h3>
+                    <h6 class="card-title">       @Html.DisplayNameFor(model => model.BirthDate)</h6>
+                    <h3 class="card-subtitle mb-2 text-muted">
+                        @Html.DisplayFor(model => model.BirthDate)
+                    </h3>
+                    <h6 class="card-title">      @Html.DisplayName("Field")</h6>
+                    <h3 class="card-subtitle mb-2 text-muted">
+                        @Html.DisplayFor(model => model.Field.Name)
+                    </h3>
+                    <h6 class="card-title">      @Html.DisplayName("Governorate")</h6>
+                    <h3 class="card-subtitle mb-2 text-muted">   @Html.DisplayFor(model => model.Governorate.Name)</h3>
+                    <h6 class="card-title">      @Html.DisplayName("Neighborhood")</h6>
+                    <h3 class="card-subtitle mb-2 text-muted">      @Html.DisplayFor(model => model.Neighborhood.Name)</h3>
+
+
+                    <a href="#" class="card-link">
+                        @Html.ActionLink("Edit", "Edit", new { id = Model.ID } , new { @class= "btn btn-info" }) |
+
+                    </a>
+                    <a href="#" class="card-link"> @Html.ActionLink("Back to List", "Index" ,null, new {  @class= "btn btn-light" })</a>
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
